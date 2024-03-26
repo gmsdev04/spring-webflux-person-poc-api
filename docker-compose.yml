@@ -1,5 +1,14 @@
 version: '3.3'
 services:
+  wiremock:
+    image: rodolpheche/wiremock:2.30.0-alpine
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./mappings:/home/wiremock/mappings
+      - ./__files:/home/wiremock/__files
+    command: --verbose
+    network_mode: bridge
   database:
     image: mysql:8.3
     container_name: mysql
