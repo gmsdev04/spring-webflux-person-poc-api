@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SpringWebfluxPersonPocApiApplication
+class App
 
 fun main(args: Array<String>) {
-	runApplication<SpringWebfluxPersonPocApiApplication>(*args)
+	runApplication<App>(*args)
 }

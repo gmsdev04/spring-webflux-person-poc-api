@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  database:
+    image: mysql:8.3
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: persons
+      MYSQL_USER: webflux
+      MYSQL_PASSWORD: WebFlux2024_maciel
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - './.mysql-data/db:/var/lib/mysql'
+    network_mode: bridge

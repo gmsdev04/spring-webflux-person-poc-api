@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-webflux-person-poc-api
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/persons
+    username: webflux
+    password: WebFlux2024_maciel
+  flyway:
+    url: jdbc:mysql://localhost:3306/persons
+    user: webflux
+    password: WebFlux2024_maciel
