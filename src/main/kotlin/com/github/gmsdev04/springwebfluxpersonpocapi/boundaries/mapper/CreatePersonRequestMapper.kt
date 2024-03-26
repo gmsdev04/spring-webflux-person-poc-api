@@ -7,9 +7,10 @@ import org.springframework.stereotype.Service
 @Service
 class CreatePersonRequestMapper {
     fun toDomain(createPersonRequestDto: CreatePersonRequestDto) =
-        object : Person{
-            override val id: Long? = null
-            override val name: String = createPersonRequestDto.name!!
-            override val email: String = createPersonRequestDto.email!!
-        }
+        Person(
+            id = null,
+            createPersonRequestDto.name!!,
+            createPersonRequestDto.email!!,
+            listOf()
+        )
 }

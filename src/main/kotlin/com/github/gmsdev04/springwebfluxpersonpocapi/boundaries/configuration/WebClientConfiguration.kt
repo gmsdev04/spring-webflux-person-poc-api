@@ -1,4 +1,4 @@
-package com.github.gmsdev04.springwebfluxpersonpocapi.boundaries
+package com.github.gmsdev04.springwebfluxpersonpocapi.boundaries.configuration
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean

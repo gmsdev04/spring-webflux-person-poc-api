@@ -7,7 +7,7 @@
     "status": 200,
     "body": "[\n\n{\n  \"homeId\": 1,\n  \"name\": \"Casa da praia\"\n},\n{\n\"homeId\": 2,\n\"name\": \"Casa de itaquera\"\n}\n  \n]",
     "headers": {
-      "Content-Type": "text/plain"
+      "Content-Type": "application/json"
     }
   }
 }

@@ -1,11 +1,10 @@
 package com.github.gmsdev04.springwebfluxpersonpocapi.boundaries.repository
 
+import com.github.gmsdev04.springwebfluxpersonpocapi.boundaries.mapper.PersonMapper
 import com.github.gmsdev04.springwebfluxpersonpocapi.boundaries.repository.dal.PersonRepositoryMySqlDao
 import com.github.gmsdev04.springwebfluxpersonpocapi.domain.Person
-import com.github.gmsdev04.springwebfluxpersonpocapi.boundaries.mapper.PersonMapper
 import com.github.gmsdev04.springwebfluxpersonpocapi.repository.PersonRepository
 import org.springframework.stereotype.Component
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @Component
@@ -17,5 +16,11 @@ class PersonRepositoryImpl(
         personRepositoryMySqlDao
             .save(personMapper.mapToEntity(person))
             .map(personMapper::mapToDomain)
+
+    override fun findById(id: Long): Mono<Person> {
+        return personRepositoryMySqlDao
+            .findById(id)
+            .map(personMapper::mapToDomain)
+    }
 
 }

@@ -5,5 +5,6 @@ import reactor.core.publisher.Mono
 
 interface PersonRepository {
     fun createPerson(person: Person) : Mono<Person>
+    fun findById(id: Long): Mono<Person>
 
 }

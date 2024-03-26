@@ -10,6 +10,7 @@ class PersonResponseDtoMapper {
         PersonResponseDto(
             person.id,
             person.name,
-            person.email
+            person.email,
+            person.homes
         )
 }
